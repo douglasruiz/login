@@ -1,0 +1,52 @@
+package universida;
+
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class proyecto_semestral {
+
+	public static void main(String[] args) 
+	{
+		  Scanner scanner = new Scanner(System.in);
+
+
+		        String username;
+		        while (true) {
+		            System.out.print("Ingrese su nombre de usuario: ");
+		            username = scanner.nextLine();
+		            if (username.matches("^[A-Za-z]+$")) {
+		                break;
+		            } else {
+		                System.out.println("El nombre de usuario solo puede contener letras. Inténtelo nuevamente.");
+		            }
+		        }
+
+		        String password;
+		        while (true) {
+		            System.out.print("Ingrese su contraseña: ");
+		            password = scanner.nextLine();
+		            if (password.matches("^[A-Za-z0-9]+$")) {
+		                break;
+		            } else {
+		                System.out.println("La contraseña solo puede contener letras y números. Inténtelo nuevamente.");
+		            }
+		        }
+
+		       
+		        String studentID;
+		        while (true) {
+		            System.out.print("Ingrese su carnet estudiantil: ");
+		            studentID = scanner.nextLine();
+		            if (studentID.matches("^[A-Za-z0-9]+$")) {
+		                break;
+		            } else {
+		                System.out.println("El carnet estudiantil solo puede contener letras y números. Inténtelo nuevamente.");
+		            }
+		        }
+
+		     
+		        scanner.close();
+		    
+	}
+
+}
