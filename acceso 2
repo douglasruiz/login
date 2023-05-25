@@ -1,0 +1,90 @@
+package universida;
+import java.util.*;
+public class proyecto_semestral2 {
+
+	public static void main(String[] args) 
+	{
+		 Scanner scanner = new Scanner(System.in);
+        String username;
+        while (true) {
+            System.out.print("Ingrese su nombre de usuario: ");
+            username = scanner.nextLine();
+            if (username.matches("^[A-Za-z ]+$")) {
+                break;
+            } else {
+                System.out.println("El nombre de usuario solo puede contener letras y espacios. Inténtelo nuevamente.");
+            }
+        }
+
+        String password;
+        while (true) {
+            System.out.print("Ingrese su contraseña: ");
+            password = scanner.nextLine();
+            if (password.matches("^[A-Za-z0-9]+$")) {
+                break;
+            } else {
+                System.out.println("La contraseña solo puede contener letras y números. Inténtelo nuevamente.");
+            }
+        }
+
+        String studentID;
+        while (true) {
+            System.out.print("Ingrese su carnet estudiantil: ");
+            studentID = scanner.nextLine();
+            if (studentID.matches("^[A-Za-z0-9]+$")) {
+                break;
+            } else {
+                System.out.println("El carnet estudiantil solo puede contener letras y números. Inténtelo nuevamente.");
+            }
+        }
+
+        System.out.println("\nSeleccione su carrera de ingeniería:");
+        System.out.println("1. Ingeniería Informática");
+        System.out.println("2. Ingeniería Electrónica");
+        System.out.println("3. Ingeniería Mecánica");
+        System.out.println("4. Ingeniería Civil");
+        System.out.println("5. Ingeniería Industrial");
+
+        int option;
+        while (true) {
+            System.out.print("Ingrese el número de la opción deseada: ");
+            String input = scanner.nextLine();
+            if (input.matches("^[1-5]$")) {
+                option = Integer.parseInt(input);
+                break;
+            } else {
+                System.out.println("Opción inválida. Inténtelo nuevamente.");
+            }
+        }
+
+        String career;
+        switch (option) {
+            case 1:
+                career = "Ingeniería Informática";
+                break;
+            case 2:
+                career = "Ingeniería Electrónica";
+                break;
+            case 3:
+                career = "Ingeniería Mecánica";
+                break;
+            case 4:
+                career = "Ingeniería Civil";
+                break;
+            case 5:
+                career = "Ingeniería Industrial";
+                break;
+            default:
+                career = "Carrera no especificada";
+                break;
+        }
+
+        System.out.println("\nDatos ingresados correctamente:");
+        System.out.println("Nombre de usuario: " + username);
+        System.out.println("Contraseña: " + password);
+        System.out.println("Carnet estudiantil: " + studentID);
+        System.out.println("Carrera seleccionada: " + career);
+
+        scanner.close();
+    }
+}	
